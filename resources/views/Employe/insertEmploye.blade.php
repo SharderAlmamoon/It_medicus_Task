@@ -308,8 +308,11 @@
                       </div>
                     <div class="form-group">
                         <label for="website">Employe Email : </label>
-                        <input type="email" name="email" id="website" class="form-control" placeholder="Enter Employe Email">
-                    </div>
+                        <input type="text" name="email" id="website" class="form-control" placeholder="Enter Employe Email">
+                        @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                       @enderror
+                      </div>
                     <div class="form-group">
                         <label for="website">Employe Phone : </label>
                         <input type="number" name="phone" id="website" class="form-control" placeholder="Enter Employe Phone">

@@ -16,9 +16,9 @@ use App\Http\Controllers\EmployeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // COMPANY
 Route::resource('Company', CompanyController::class)->except('show');
@@ -39,9 +39,9 @@ Route::controller(EmployeController::class)->group(function(){
 });
 
 
-Route::get('/dashboard', function () {
-    return view('backenddashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', function () {
+    return view('dashboard');
+})->name('dashboard');
 
 
 require __DIR__.'/auth.php';

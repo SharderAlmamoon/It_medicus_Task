@@ -34,7 +34,8 @@ class EmployeController extends Controller
     {
         $request->validate([
             'name'=>'required',
-            'company_id'=>'required'
+            'company_id'=>'required',
+            'email'=>'required|email:rfc,dns|unique:employes',
         ]);
         $employe = new Employe();
         $employe->name = $request->name;
